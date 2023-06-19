@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+message DataStorage_t {
+    string fruit = 1;
+    double weight = 2;
+    double size = 3;
+    double price = 4;
+}
