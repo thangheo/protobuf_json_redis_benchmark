@@ -7,7 +7,7 @@
 using namespace rapidjson;
 
 using namespace std;
-#define DS_RD_PORT 6380
+#define DS_RD_PORT 6379
 DataStorage::DataStorage()
     // : redisDB("tcp://localhost")
 {
@@ -15,7 +15,7 @@ DataStorage::DataStorage()
     // Replace "tcp://localhost" with the appropriate Redis server address if necessary
     redisDB = std::make_shared<RedisDatabase>("127.0.0.1",DS_RD_PORT);
     // Set the key prefix
-    keyPrefix = "analytical_data:";
+    keyPrefix = "fruit_data:";
 }
 DataStorage::~DataStorage()
 {
